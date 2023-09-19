@@ -8,6 +8,9 @@ module.exports = {
     './src/**/*.{ts,tsx}',
 	],
   theme: {
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif']
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -50,6 +53,25 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brandColor: "#9E6EFE",
+        lightPurple: "rgba(158, 110, 254, 0.06)",
+        lightRed: "rgba(240, 61, 61, 0.06)",
+        darkScale: {
+          dark10: "#2D3748",
+          dark20: "#718096",
+          dark30: "#F9F9F9",
+          dark40: "#FFFF"
+        },
+        colorSystem: {
+          support01: "#2961FF",
+          support02: "#0BB07B",
+          support03: "#FFCE52",
+          support04: "#F03D3D",
+          support05: "#E0EDE0",
+        } 
+      },
+      boxShadow: {
+        '3xl': '8px 13px 40px 0px #F1EFFF'
       },
       borderRadius: {
         lg: "var(--radius)",
