@@ -53,9 +53,6 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        brandColor: "#9E6EFE",
-        lightPurple: "rgba(158, 110, 254, 0.06)",
-        lightRed: "rgba(240, 61, 61, 0.06)",
         darkScale: {
           dark10: "#2D3748",
           dark20: "#718096",
@@ -68,6 +65,11 @@ module.exports = {
           support03: "#FFCE52",
           support04: "#F03D3D",
           support05: "#E0EDE0",
+          brandColor: "#9E6EFE",
+          lightPurple: "rgba(158, 110, 254, 0.06)",
+          lightRed: "rgba(240, 61, 61, 0.06)",
+          dark10: "#272727",
+          gray10: "#6A6969"
         } 
       },
       boxShadow: {

@@ -9,15 +9,15 @@ const App = () => {
   
   return (
     <div className="flex min-h-screen font-poppins relative">
-      <aside className={`flex flex-col items-center bg-darkScale-dark40 z-10 absolute h-screen w-72 shadow-3xl rounded-r-3xl transition-all ease-in-out duration-500 md:z-auto md:static md:visible ${open === false ? "invisible left-[-490px]" : "visible left-0"}`}>
+      <aside className={`flex flex-col items-center bg-darkScale-dark40 z-10 absolute h-screen w-72 shadow-3xl rounded-r-3xl transition-all ease-in-out duration-500 lg:z-auto lg:static lg:visible ${open === false ? "invisible left-[-490px]" : "visible left-0"}`}>
         <X 
-          size={24} 
-          className="text-colorSystem-support04 my-8 mx-4 md:hidden self-start"
+          size={30} 
+          className="text-colorSystem-support04 my-8 mx-4 self-start lg:hidden"
           onClick={() => setIsOpen(false)} 
         />
 
-        <h1 className="text-3xl font-semibold mb-16 md:mt-14">
-          <strong className="text-brandColor">e</strong>Front
+        <h1 className="text-3xl font-semibold mb-16 lg:mt-14">
+          <strong className="text-colorSystem-brandColor">e</strong>Front
         </h1>
 
         <div className="space-y-10">
@@ -54,11 +54,11 @@ const App = () => {
           />
         </div>
       </aside>
-      <main className={`bg-darkScale-dark30 flex flex-col flex-1 transition-all ease-in-out ${open ? "blur-sm" : "filter-none"} md:filter-none`}>
-        <header className="flex items-center justify-between p-7 md:hidden">
+      <main className={`bg-darkScale-dark30 flex flex-col flex-1 transition-all ease-in-out ${open ? "blur-sm" : "filter-none"} lg:filter-none`}>
+        <header className="flex items-center justify-between p-7 lg:hidden">
           <Menu
             size={24}
-            className="text-brandColor md:hidden"
+            className="text-colorSystem-brandColor lg:hidden"
             onClick={() => setIsOpen(true)}
           />
 
@@ -66,8 +66,8 @@ const App = () => {
             <Search size={24} />
             <div className="relative">
               <span className="absolute flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandColor opacity-75 left-5 top-[-3px]"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brandColor left-5 top-[-3px]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-colorSystem-brandColor opacity-75 left-5 top-[-3px]"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-colorSystem-brandColor left-5 top-[-3px]"></span>
               </span>
               <Bell size={24} />
             </div>
@@ -77,12 +77,32 @@ const App = () => {
             </Avatar>
           </div>
         </header>
-        <section className="flex-1 px-6 py-8 md:px-44 md:py-12">
-          <h1>Olá, Iuri</h1>
-          <p>Aqui estão as informações sobre suas vendas.</p>
+        <section className="flex-1 px-6 py-8 lg:px-44 lg:py-12">
+          <div className="flex justify-between">
+            <div>
+              <h1 className="text-3xl text-colorSystem-dark10">Olá, Iuri</h1>
+              <p className="text-lg text-colorSystem-gray10">Aqui estão as informações sobre suas vendas.</p>
+            </div>
+            <div className="hidden lg:flex lg:items-center lg:gap-6">
+              <Search size={24} />
+              <div className="relative">
+                <span className="absolute flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-colorSystem-brandColor opacity-75 left-5 top-[-3px]"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-colorSystem-brandColor left-5 top-[-3px]"></span>
+                </span>
+                <Bell size={24} />
+              </div>
+              <Avatar className="ml-6">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </div>
+          </div>
 
           {/* grid dashboard */}
-          <div></div>
+          <div>
+            <h1>Dashboard</h1>
+          </div>
 
           {/* history Table */}
           <div></div>

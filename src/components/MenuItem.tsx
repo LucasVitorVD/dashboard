@@ -9,9 +9,9 @@ type MenuItemProps = {
 const MenuItem = ({ icon: Icon, text, isDanger }: MenuItemProps) => {
   return (
     <div
-      className={`flex items-center gap-3 py-3 px-9 hover:cursor-pointer rounded-sm ${isDanger ? "bg-lightRed" : "bg-lightPurple"}`}>
-      <Icon size={24} className={isDanger ? "text-colorSystem-support04" : "text-brandColor"} />
-      <p className={`text-lg ${isDanger ? "text-colorSystem-support04" : "text-brandColor"}`}>{text}</p>
+      className={`flex items-center gap-3 py-3 px-9 hover:cursor-pointer rounded-sm ${isDanger ? "bg-colorSystem-lightRed" : "bg-colorSystem-lightPurple"}`}>
+      <Icon size={24} className={isDanger ? "text-colorSystem-support04" : "text-colorSystem-brandColor"} />
+      <p className={`text-lg ${isDanger ? "text-colorSystem-support04" : "text-colorSystem-brandColor"}`}>{text}</p>
     </div>
   )
 }
