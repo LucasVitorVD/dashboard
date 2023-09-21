@@ -12,7 +12,10 @@ const App = () => {
     <div className="flex min-h-screen font-poppins relative">
       <Sidebar open={open} setOpen={setOpen} />
 
-      <main className={`bg-darkScale-dark30 flex flex-col flex-1 transition-all ease-in-out ${open ? "blur-sm" : "filter-none"} lg:filter-none`}>
+      <main
+        data-open={open} 
+        className={`bg-darkScale-dark30 flex flex-col flex-1 transition-all ease-in-out ${open ? "blur-sm" : "filter-none"} lg:filter-none`}
+      >
         <MobileHeader setOpen={setOpen} />
 
         <section className="flex-1 px-6 py-8 space-y-10 lg:px-44 lg:py-12">
