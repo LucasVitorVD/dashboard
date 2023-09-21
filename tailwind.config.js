@@ -68,6 +68,7 @@ module.exports = {
           brandColor: "#9E6EFE",
           lightPurple: "rgba(158, 110, 254, 0.06)",
           lightRed: "rgba(240, 61, 61, 0.06)",
+          lightGreen: "#0BB07B0F",
           dark10: "#272727",
           gray10: "#6A6969"
         } 
