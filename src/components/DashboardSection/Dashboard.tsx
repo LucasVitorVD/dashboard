@@ -1,11 +1,26 @@
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "../ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
 import { Badge } from "../ui/badge";
-import { TrendingUp } from "lucide-react"
+import { TrendingUp } from "lucide-react";
 
 const Dashboard = () => {
   return (
     <div className="space-y-10">
-      <div className="flex flex-col gap-8 lg:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         <Card className="h-[20.9rem]">
           <CardHeader>
             <CardTitle>Card 1</CardTitle>
@@ -38,7 +53,7 @@ const Dashboard = () => {
         </Card>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8">
         <Card className="h-[9.375rem]">
           <CardHeader className="pb-1">
             <CardTitle className="text-base">Total de vendas</CardTitle>
@@ -101,10 +116,31 @@ const Dashboard = () => {
       <div>
         <Card className="h-[18rem]">
           <CardHeader>
-            <CardTitle>Card History</CardTitle>
+            <CardTitle>Histórico de compradores</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Table</p>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>ID</TableHead>
+                  <TableHead>Data</TableHead>
+                  <TableHead>Nome</TableHead>
+                  <TableHead>Localização</TableHead>
+                  <TableHead>Valor</TableHead>
+                  <TableHead>Situação</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">#12345</TableCell>
+                  <TableCell>02/08/2023</TableCell>
+                  <TableCell>Roberto Santos</TableCell>
+                  <TableCell>Rio Grande do Sul</TableCell>
+                  <TableCell>R$ 15,00</TableCell>
+                  <TableCell>Aprovado</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </CardContent>
         </Card>
       </div>

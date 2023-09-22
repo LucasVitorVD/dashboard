@@ -11,11 +11,11 @@ const MobileHeader = ({ setOpen }: MobileProps) => {
     <header className="flex items-center justify-between p-7 lg:hidden">
       <Menu
         size={24}
-        className="text-colorSystem-brandColor lg:hidden"
+        className="text-colorSystem-brandColor xl:hidden"
         onClick={() => setOpen(true)}
       />
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 lg:hidden">
         <Search size={24} />
         <div className="relative">
           <span className="absolute flex h-2 w-2">

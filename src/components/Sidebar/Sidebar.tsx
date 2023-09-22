@@ -15,29 +15,30 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         open === false ? "invisible left-[-490px]" : "visible left-0"
       }`}
     >
-      <X
-        size={30}
-        className="text-colorSystem-support04 my-8 mx-4 self-start lg:hidden"
-        onClick={() => setOpen(false)}
-      />
+      <div className="w-full my-8">
+        <X
+          size={30}
+          className="text-colorSystem-support04 self-start mx-4 lg:hidden"
+          onClick={() => setOpen(false)}
+        />
+      </div>
 
       <h1 className="text-3xl font-semibold mb-16 lg:mt-14">
         <strong className="text-colorSystem-brandColor">e</strong>Front
       </h1>
 
-      <div className="space-y-10">
-        <Item icon={LayoutGrid} text="Dashboard" />
-        <Item icon={Import} text="Carteira" />
-        <Item icon={ShoppingCart} text="Transações" />
-        <Item icon={Users} text="Suporte" />
-      </div>
-
-      <Separator className="my-10" />
-
-      <div className="space-y-10">
-        <Item icon={Settings} text="Ajustes" />
-
-        <Item icon={Power} text="Desconectar" danger />
+      <div className="h-full">
+        <div className="space-y-5 xl:space-y-10">
+          <Item icon={LayoutGrid} text="Dashboard" />
+          <Item icon={Import} text="Carteira" />
+          <Item icon={ShoppingCart} text="Transações" />
+          <Item icon={Users} text="Suporte" />
+        </div>
+        <Separator className="my-10" />
+        <div className="space-y-10">
+          <Item icon={Settings} text="Ajustes" />
+          <Item icon={Power} text="Desconectar" danger />
+        </div>
       </div>
     </aside>
   );
