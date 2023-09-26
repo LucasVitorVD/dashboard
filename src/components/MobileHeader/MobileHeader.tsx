@@ -11,7 +11,7 @@ const MobileHeader = ({ setOpen }: MobileProps) => {
     <header className="flex items-center justify-between p-7 lg:hidden">
       <Menu
         size={24}
-        className="text-colorSystem-brandColor xl:hidden"
+        className="text-colorSystem-brandColor cursor-pointer xl:hidden"
         onClick={() => setOpen(true)}
       />
 

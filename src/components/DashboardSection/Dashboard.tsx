@@ -13,20 +13,20 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
 import { Badge } from "../ui/badge";
 import { TrendingUp } from "lucide-react";
+import BarChart from "../BarChart";
 
 const Dashboard = () => {
   return (
     <div className="space-y-10">
       <div className="flex flex-col gap-8 md:flex-row">
-        <Card className="h-[20.9rem]">
+        <Card>
           <CardHeader>
-            <CardTitle>Card 1</CardTitle>
+            <CardTitle>Gráfico de receitas</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p>Content</p>
+          <CardContent className="flex justify-center">
+            <BarChart />
           </CardContent>
         </Card>
 
@@ -114,12 +114,12 @@ const Dashboard = () => {
 
       {/* history Table */}
       <div>
-        <Card className="h-[18rem]">
+        <Card className="h-[18rem] max-[600px]:w-[700px] w-full">
           <CardHeader>
             <CardTitle>Histórico de compradores</CardTitle>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table className="max-[600px]:w-[800px] w-full overflow-scroll">
               <TableHeader>
                 <TableRow>
                   <TableHead>ID</TableHead>
@@ -137,7 +137,21 @@ const Dashboard = () => {
                   <TableCell>Roberto Santos</TableCell>
                   <TableCell>Rio Grande do Sul</TableCell>
                   <TableCell>R$ 15,00</TableCell>
-                  <TableCell>Aprovado</TableCell>
+                  <TableCell>
+                    <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support02"></span>
+                    Aprovado
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">#54321</TableCell>
+                  <TableCell>12/02/2023</TableCell>
+                  <TableCell>Ana Almeida</TableCell>
+                  <TableCell>Brasília</TableCell>
+                  <TableCell>R$ 40,00</TableCell>
+                  <TableCell>
+                    <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support03"></span>
+                    Em análise
+                  </TableCell>
                 </TableRow>
               </TableBody>
             </Table>

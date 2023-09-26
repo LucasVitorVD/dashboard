@@ -18,7 +18,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       <div className="w-full my-8">
         <X
           size={30}
-          className="text-colorSystem-support04 self-start mx-4 lg:hidden"
+          className="text-colorSystem-support04 self-start cursor-pointer mx-4 lg:hidden"
           onClick={() => setOpen(false)}
         />
       </div>
@@ -27,7 +27,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         <strong className="text-colorSystem-brandColor">e</strong>Front
       </h1>
 
-      <div className="h-full">
+      <nav className="h-full">
         <div className="space-y-5 xl:space-y-10">
           <Item icon={LayoutGrid} text="Dashboard" />
           <Item icon={Import} text="Carteira" />
@@ -39,7 +39,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           <Item icon={Settings} text="Ajustes" />
           <Item icon={Power} text="Desconectar" danger />
         </div>
-      </div>
+      </nav>
     </aside>
   );
 };
