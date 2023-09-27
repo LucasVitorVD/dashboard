@@ -15,22 +15,22 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "../ui/badge";
 import { TrendingUp } from "lucide-react";
-import BarChart from "../BarChart";
+import BarChartComponent from "../BarChartComponent/BarChartComponent"
 
 const Dashboard = () => {
   return (
     <div className="space-y-10">
       <div className="flex flex-col gap-8 md:flex-row">
-        <Card>
+        <Card className="h-[20.9rem] md:w-1/2">
           <CardHeader>
             <CardTitle>Gráfico de receitas</CardTitle>
           </CardHeader>
           <CardContent className="flex justify-center">
-            <BarChart />
+            <BarChartComponent />
           </CardContent>
         </Card>
 
-        <Card className="h-[20.9rem]">
+        <Card className="h-[20.9rem] md:w-1/2">
           <CardHeader>
             <CardTitle>Histório de transações</CardTitle>
           </CardHeader>

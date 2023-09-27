@@ -1,12 +1,14 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuItem,
+  DropdownMenuGroup,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Button } from "../ui/button";
 import { Search, Bell, User } from "lucide-react";
 
 interface Props {
@@ -18,35 +20,61 @@ const HeaderItems = ({ className }: Props) => {
     <div className={className}>
       <Search size={24} />
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <div className="relative">
-            <span className="absolute flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-colorSystem-brandColor opacity-75 left-5 top-[-3px]"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-colorSystem-brandColor left-5 top-[-3px]"></span>
-            </span>
-            <Bell size={24} />
-          </div>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+            <div className="relative">
+              <span className="absolute flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-colorSystem-brandColor opacity-75 left-5 top-[-3px]"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-colorSystem-brandColor left-5 top-[-3px]"></span>
+              </span>
+              <Bell size={24} />
+            </div>
+          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>Notificações</DropdownMenuLabel>
+        <DropdownMenuContent className="w-56" align="end" forceMount>
+          <DropdownMenuLabel className="font-normal">
+            <div className="flex flex-col space-y-1">
+              <p className="text-sm font-medium leading-none">Notificações</p>
+            </div>
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Você comprou um item!</DropdownMenuItem>
+          <DropdownMenuGroup>
+            <DropdownMenuItem>Você comprou um item!</DropdownMenuItem>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator />
         </DropdownMenuContent>
       </DropdownMenu>
+
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Avatar className="ml-6">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>
-              <User />
-            </AvatarFallback>
-          </Avatar>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/avatars/01.png" alt="@shadcn" />
+              <AvatarFallback>
+                <User />
+              </AvatarFallback>
+            </Avatar>
+          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
+        <DropdownMenuContent className="w-56" align="end" forceMount>
+          <DropdownMenuLabel className="font-normal">
+            <div className="flex flex-col space-y-1">
+              <p className="text-sm font-medium leading-none">Lucas</p>
+              <p className="text-xs leading-none text-muted-foreground">
+                m@example.com
+              </p>
+            </div>
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Editar Perfil</DropdownMenuItem>
-          <DropdownMenuItem>Trocar Usuário</DropdownMenuItem>
+          <DropdownMenuGroup>
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem>New Team</DropdownMenuItem>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="focus:bg-colorSystem-lightRed focus:text-colorSystem-support04 text-colorSystem-support04">
+            Log out
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
