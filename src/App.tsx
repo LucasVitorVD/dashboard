@@ -11,8 +11,7 @@ const App = () => {
       <Sidebar open={open} setOpen={setOpen} />
 
       <main
-        data-open={open}
-        className={`bg-darkScale-dark30 flex flex-col flex-1 transition-all ease-in-out ${
+        className={`bg-sectionBackground flex flex-col flex-1 transition-all ease-in-out ${
           open ? "blur-sm" : "filter-none"
         } lg:filter-none`}
       >

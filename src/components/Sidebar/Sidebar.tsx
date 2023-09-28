@@ -11,7 +11,7 @@ interface SidebarProps {
 const Sidebar = ({ open, setOpen }: SidebarProps) => {
   return (
     <aside
-      className={`flex flex-col items-center bg-darkScale-dark40 z-10 absolute h-screen w-72 shadow-3xl rounded-r-3xl transition-all ease-in-out duration-500 lg:z-auto lg:static lg:visible ${
+      className={`flex flex-col items-center bg-background z-10 absolute w-72 shadow-2xl rounded-r-3xl transition-all ease-in-out duration-500 h-full lg:h-0 lg:z-auto lg:static lg:visible ${
         open === false ? "invisible left-[-490px]" : "visible left-0"
       }`}
     >

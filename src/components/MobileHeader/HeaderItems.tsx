@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
+import { ModeToggle } from "../mode-toggle/ModeToggle";
 import { Search, Bell, User } from "lucide-react";
 
 interface Props {
@@ -44,6 +45,8 @@ const HeaderItems = ({ className }: Props) => {
           <DropdownMenuSeparator />
         </DropdownMenuContent>
       </DropdownMenu>
+
+      <ModeToggle />
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
