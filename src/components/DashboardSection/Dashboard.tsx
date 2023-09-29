@@ -13,9 +13,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { ScrollArea } from "../ui/scroll-area";
 import { Badge } from "../ui/badge";
 import { TrendingUp } from "lucide-react";
-import BarChartComponent from "../BarChartComponent/BarChartComponent"
+import BarChartComponent from "../BarChartComponent/BarChartComponent";
 
 const Dashboard = () => {
   return (
@@ -34,22 +35,24 @@ const Dashboard = () => {
           <CardHeader>
             <CardTitle>Histório de transações</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
-              <span>Ontem</span>
-              <span>R$-540,32</span>
-            </div>
+          <ScrollArea className="h-[240px]">
+            <CardContent>
+              <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
+                <span>Ontem</span>
+                <span>R$-540,32</span>
+              </div>
 
-            <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
-              <span>Quinta-Feira</span>
-              <span>R$-273,90</span>
-            </div>
+              <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
+                <span>Quinta-Feira</span>
+                <span>R$-273,90</span>
+              </div>
 
-            <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
-              <span>Segunda-Feira</span>
-              <span>R$-1.456,20</span>
-            </div>
-          </CardContent>
+              <div className="flex justify-between py-3 px-3 rounded-sm bg-colorSystem-lightPurple text-colorSystem-brandColor mb-6">
+                <span>Segunda-Feira</span>
+                <span>R$-1.456,20</span>
+              </div>
+            </CardContent>
+          </ScrollArea>
         </Card>
       </div>
 
@@ -114,47 +117,49 @@ const Dashboard = () => {
 
       {/* history Table */}
       <div>
-        <Card className="h-[18rem] max-[600px]:w-[700px] w-full">
+        <Card className="h-[18rem] w-full">
           <CardHeader>
             <CardTitle>Histórico de compradores</CardTitle>
           </CardHeader>
           <CardContent>
-            <Table className="max-[600px]:w-[800px] w-full overflow-scroll">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>ID</TableHead>
-                  <TableHead>Data</TableHead>
-                  <TableHead>Nome</TableHead>
-                  <TableHead>Localização</TableHead>
-                  <TableHead>Valor</TableHead>
-                  <TableHead>Situação</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">#12345</TableCell>
-                  <TableCell>02/08/2023</TableCell>
-                  <TableCell>Roberto Santos</TableCell>
-                  <TableCell>Rio Grande do Sul</TableCell>
-                  <TableCell>R$ 15,00</TableCell>
-                  <TableCell>
-                    <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support02"></span>
-                    Aprovado
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">#54321</TableCell>
-                  <TableCell>12/02/2023</TableCell>
-                  <TableCell>Ana Almeida</TableCell>
-                  <TableCell>Brasília</TableCell>
-                  <TableCell>R$ 40,00</TableCell>
-                  <TableCell>
-                    <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support03"></span>
-                    Em análise
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+            <ScrollArea className="w-full h-[180px]">
+              <Table className="w-full">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>ID</TableHead>
+                    <TableHead>Data</TableHead>
+                    <TableHead>Nome</TableHead>
+                    <TableHead>Localização</TableHead>
+                    <TableHead>Valor</TableHead>
+                    <TableHead>Situação</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">#12345</TableCell>
+                    <TableCell>02/08/2023</TableCell>
+                    <TableCell>Roberto Santos</TableCell>
+                    <TableCell>Rio Grande do Sul</TableCell>
+                    <TableCell>R$ 15,00</TableCell>
+                    <TableCell>
+                      <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support02"></span>
+                      Aprovado
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">#54321</TableCell>
+                    <TableCell>12/02/2023</TableCell>
+                    <TableCell>Ana Almeida</TableCell>
+                    <TableCell>Brasília</TableCell>
+                    <TableCell>R$ 40,00</TableCell>
+                    <TableCell>
+                      <span className="inline-flex rounded-full h-2 w-2 mr-1.5 bg-colorSystem-support03"></span>
+                      Em análise
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </ScrollArea>
           </CardContent>
         </Card>
       </div>
